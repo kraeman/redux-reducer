@@ -6,7 +6,6 @@ export function manageFriends(state = {friends: []}, action){
     }else if(action.type === "REMOVE_FRIEND") {
         let idx = newState.friends.findIndex((frien) => frien.id === action.id)
         newState.friends.splice(idx, 1)
-        console.log(idx)
         return newState
     }else{
         return newState
